@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymApp.ExercicioList"
+             Title="Todos os exercícios">
+
+  
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10" HorizontalOptions="FillAndExpand">
+                <Button Text="Grupos Musculares" HeightRequest="25" WidthRequest="180" FontSize="12" HorizontalOptions="End" CornerRadius="30" Padding="5" BackgroundColor="#0066CC" Clicked="ExercicioFiltro_Button"></Button>
+            </StackLayout>
+        
+            <CollectionView x:Name="ExercicioCollection" BackgroundColor="#f6f6f6">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate >
+                        <Grid Margin="10">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="TapGestureRecognizerTapped_To_ExercicioDetails" />
+                            </Grid.GestureRecognizers>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="250*" />
+                            </Grid.RowDefinitions>
+                            <Border StrokeShape="RoundRectangle 25" 
+                              Background="White"  WidthRequest="200">
+                                <StackLayout>
+                                    <Image Source="{Binding ImagemExercicio}"
+                                   Grid.Row="0"
+                                   Aspect="AspectFill"
+                                   WidthRequest="170"
+                                   HeightRequest="150" SizeChanged="Image_SizeChanged"/>
+
+                                    <Label Text="{Binding Nome}" FontAttributes="Bold" Padding="10" HorizontalOptions="Center"/>
+                                    <Border Stroke="Transparent" StrokeShape="RoundRectangle 30"  Padding="5" Margin="15" BackgroundColor="#0066CC">
+                                        <Label Text="{Binding AreaCorporal}"   HorizontalOptions="Center" FontSize="12"  TextColor="White" />
+                                    </Border>
+                                </StackLayout>
+                            </Border>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+  
+    
+
+</ContentPage>

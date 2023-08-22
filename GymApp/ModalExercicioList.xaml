@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymApp.ModalExercicioList"
+             Title="ModalExercicioList">
+    <StackLayout>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <StackLayout x:Name="OpcoesLayout" Padding="10" Orientation="Vertical">
+
+                    <Label Text="Peito" Grid.Column="0" Padding="0,20,0,0"></Label>
+                    <CheckBox x:Name ="CheckBoxOpcao1" Grid.Column="0" />
+
+                    <Label Text="Costas" Grid.Column="1" Grid.Row="1"></Label>
+                    <CheckBox x:Name ="CheckBoxOpcao2" Grid.Column="2" Grid.Row="2"/>
+
+                    <Label Text="Biceps" Grid.Column="1" Grid.Row="1"></Label>
+                    <CheckBox  x:Name ="CheckBoxOpcao3"/>
+
+                    <Label Text="Triceps" Grid.Column="1" Grid.Row="1"></Label>
+                    <CheckBox  x:Name ="CheckBoxOpcao4"/>
+
+
+                </StackLayout>
+
+                <Button Text="Filtrar"  Margin="0,20,0,0"  Clicked="FiltrarButton_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+
+        <StackLayout Padding="20">
+            <Button Text="Fechar"  Margin="0,20,0,0"  Background="Red" Clicked="ButtonFechar_Cliked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

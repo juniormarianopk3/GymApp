@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymApp.ExercercioDetails"
+             Title="Detalhes do exercício"
+    >
+    <ScrollView>
+
+        <StackLayout Padding="10">
+            <Image x:Name="ImagemExercicio" WidthRequest="600" HeightRequest="200" IsAnimationPlaying="true"></Image>
+            <Label x:Name="Nome" HorizontalOptions="Start" Margin="10" FontAttributes="Bold" FontSize="Large"></Label>
+
+            <HorizontalStackLayout>
+                <Grid ColumnDefinitions="45,Auto,Auto" RowDefinitions="45" >
+                    <Border BackgroundColor="#0066CC" Grid.ColumnSpan="3" StrokeShape="RoundRectangle 30" Stroke="Transparent" StrokeThickness="3" >
+
+                    </Border>
+
+                    <Image Source="areaico.png"   HeightRequest="25" WidthRequest="25"  Grid.Column="0" Grid.RowSpan="3" ></Image>
+                    <Label Text="Grupo Muscular" FontSize="14" Grid.Column="1" FontAttributes="Bold"  Margin="0,0,20,0" Padding="5" TextColor="White"></Label>
+                    <Label x:Name="AreaCorporal" FontSize="13" Grid.Row="2" Grid.Column="1"  Padding="10" Margin="0,10,0,0" TextColor="White" />
+                </Grid>
+                <HorizontalStackLayout>
+                    <Grid ColumnDefinitions="45,Auto,Auto" RowDefinitions="45" >
+                        <Border BackgroundColor="#0066CC" StrokeShape="RoundRectangle 30" Stroke="Transparent" Grid.ColumnSpan="3" StrokeThickness="3">
+                        </Border>
+                        <Image Source="tipoico.png"   HeightRequest="25" WidthRequest="25"  Grid.Column="0" Grid.RowSpan="3" ></Image>
+                        <Label Text="Tipo de Exercício" FontAttributes="Bold" FontSize="14" Grid.Column="1" Margin="0,0,20,0" Padding="5" TextColor="White"></Label>
+                        <Label Text="Musculação"  FontSize="13" Grid.Column="1" Grid.Row="2" Padding="10" Margin="0,10,0,0"  TextColor="White" HorizontalOptions="CenterAndExpand">
+                        </Label>
+                    </Grid>
+                   
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+
+            <StackLayout Spacing="10"> 
+                <Label Text="Preparação" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Body"></Label>
+                <Label x:Name="Preparacao"></Label>
+
+                <Label Text="Execução" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Body"></Label>
+                <Label x:Name="Execucao"></Label>
+
+                <Label Text="Dicas" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Body"></Label>
+                <Label x:Name="Dicas"></Label>
+                <BoxView Color="Gray"
+             HeightRequest="1"
+             HorizontalOptions="Fill" />
+                <Label Text="Músculos Alvo" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Body"></Label>
+
+                <Image x:Name="ImagemMusculoAlvo" HeightRequest="200" WidthRequest="200"></Image>
+
+                <HorizontalStackLayout>
+                    <Label Text="- Músculos Primários: "/>
+                    <Label x:Name="MusculoPrincipal"></Label>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="- Músculos Secundários: "/>
+                    <Label x:Name="MusculoSecundario"></Label>
+                </HorizontalStackLayout>
+            </StackLayout>
+
+            
+            
+
+            
+        </StackLayout>
+            
+    </ScrollView>
+        
+
+</ContentPage>
