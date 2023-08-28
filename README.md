@@ -9,7 +9,7 @@ sabe mais sobre os exercicíos e aprende a forma correta como executa-lo, projet
 
 
 Ao clicar em cada exercício o usuário poderá obter mais informações sobre o exercicío, 
-as imagens do exercicío é ilistrada em gif, para melhorar o aprendizado do exercício, onde o usuário verá como ele é executado.
+as imagens do exercicío são ilistradas em gif, para melhorar o aprendizado do exercício, onde o usuário verá como ele é executado.
 
 
 <img src="/GymApp/Resources/Images/Readme/details1.jpg">
